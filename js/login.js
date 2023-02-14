@@ -7,6 +7,14 @@ document.getElementById('btn-submit').addEventListener('click', function(){
     //step-3 get the password
     const passwordField = document.getElementById('user-password');
     const password = passwordField.value;
-    console.log(email, password); 
+    // console.log(email, password); 
+
+    // step-4 varify emial and password
+    if(email === "demo@gmail.com" && password === "admin24"){
+        console.log('Valid user!');
+    }
+    else{
+        console.log('Invalid user');
+    }
 })
 
