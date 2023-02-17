@@ -9,8 +9,18 @@ document.getElementById('btn-deposit').addEventListener('click', function(){
     const previousDepositTotal = depositTotalElement.innerText;
     depositTotalElement.innerText = newDepositAmount;
 
-    const currentDepositTotal = parseInt(previousDepositTotal) + parseInt(newDepositAmount);
+    // step 4 - add numbers to set the total deposit
+    const currentDepositTotal = parseFloat(previousDepositTotal) + parseFloat(newDepositAmount);
     depositTotalElement.innerText = currentDepositTotal;
+
+    // step 5 - get balance current total
+    const balanceTotalElement = document.getElementById('balance-total');
+    const previousBalanceTotal = balanceTotalElement.innerText;
+
+    // step 6 - calculate current total balance
+    const currentBalanceTotal = parseFloat(previousBalanceTotal) + parseFloat(newDepositAmount);
+    balanceTotalElement.innerText = currentBalanceTotal;
+
 
     // step 7 - clear the deposit field
     depositField.value = '';
