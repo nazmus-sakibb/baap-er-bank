@@ -11,7 +11,7 @@ document.getElementById('btn-submit').addEventListener('click', function(){
 
     // step-4 varify emial and password
     if(email === "demo@gmail.com" && password === "admin24"){
-        window.location.href = 'bank.html';
+        // window.location.href = 'bank.html';
     }
     else{
         alert('Invalid user!!!');
