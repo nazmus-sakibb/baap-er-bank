@@ -2,10 +2,16 @@
 document.getElementById('btn-deposit').addEventListener('click', function(){
     // step 2 - get the deposit amount form the deposit field
     const depositField = document.getElementById('deposit-field');
-    const depositAmount = depositField.value;
+    const newDepositAmount = depositField.value;
     
     // step 3 - get the deposit total
     const depositTotalElement = document.getElementById('deposit-total');
-    const depositTotal = depositTotalElement.innerText;
-    depositTotalElement.innerText = depositAmount;
+    const previousDepositTotal = depositTotalElement.innerText;
+    depositTotalElement.innerText = newDepositAmount;
+
+    const currentDepositTotal = parseInt(previousDepositTotal) + parseInt(newDepositAmount);
+    depositTotalElement.innerText = currentDepositTotal;
+
+    // step 7 - clear the deposit field
+    depositField.value = '';
 })
