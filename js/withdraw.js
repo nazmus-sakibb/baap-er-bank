@@ -15,6 +15,9 @@ document.getElementById('btn-withdraw').addEventListener('click', function(){
     const newWithdrawAmountString = withdrawField.value;
     const newWithdrawAmount = parseFloat(newWithdrawAmountString);
 
+    //step 7
+    withdrawField.value = '';
+    
     //step 3
     const withdrawTotalElement = document.getElementById('withdraw-total');
     const previousWithdrawTotal = parseFloat(withdrawTotalElement.innerText);
@@ -25,8 +28,7 @@ document.getElementById('btn-withdraw').addEventListener('click', function(){
     const balanceTotalElement = document.getElementById('balance-total');
     const previousBalanceTotal = parseFloat(balanceTotalElement.innerText);
 
-    //step 7
-    withdrawField.value = '';
+    
 
     if(newWithdrawAmount > previousBalanceTotal){
         alert('Baap er bank e eto taka nai!');
